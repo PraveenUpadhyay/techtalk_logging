@@ -3,9 +3,9 @@ package handlers
 import (
     "encoding/json"
     "net/http"
-    "project/services"
-    "project/models"
-)
+    "github.com/PraveenUpadhyay/techtalk_logging/services"
+    "github.com/PraveenUpadhyay/techtalk_logging/models"
+)   
 
 // Handler to create a user
 func CreateUserHandler(w http.ResponseWriter, r *http.Request) {

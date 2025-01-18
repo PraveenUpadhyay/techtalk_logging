@@ -1,8 +1,8 @@
 package services
 
 import (
-    "project/db"
-    "project/models"
+    "github.com/PraveenUpadhyay/techtalk_logging/db"
+    "github.com/PraveenUpadhyay/techtalk_logging/models"
     "fmt"
 )
 

@@ -1,6 +1,9 @@
 package db
 
-import "project/models"
+import (
+    "github.com/PraveenUpadhyay/techtalk_logging/models"
+    "fmt"
+)
 
 // Dummy database to hold users
 var users = make(map[string]models.User)

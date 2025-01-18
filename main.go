@@ -3,6 +3,7 @@ package main
 import (
     "log"
     "net/http"
+    "github.com/PraveenUpadhyay/techtalk_logging/handlers"
 )
 
 func main() {
