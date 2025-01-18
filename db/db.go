@@ -1,24 +1,23 @@
 package db
 
 import (
-    "github.com/PraveenUpadhyay/techtalk_logging/models"
-    "fmt"
+	"techtalk_logging/common"
+	"techtalk_logging/models"
 )
 
 // Dummy database to hold users
 var users = make(map[string]models.User)
 
 // Check if a user already exists in the database
-func UserExists(email string) bool {
-    _, exists := users[email]
-    return exists
+func UserExists(userName string) error {
+	if _, exists := users[userName]; exists {
+		return common.ErrExists
+	}
+	return nil
 }
 
 // Add a user to the database
 func AddUser(user models.User) error {
-    if UserExists(user.Email) {
-        return fmt.Errorf("user already exists")
-    }
-    users[user.Email] = user
-    return nil
+	users[user.Name] = user
+	return nil
 }
