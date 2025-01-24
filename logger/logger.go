@@ -29,3 +29,9 @@ func (l *Logger) Error(transactionID, message string, v ...interface{}) {
 	l.Logger.SetPrefix(fmt.Sprintf("%s: %s : ", "ERROR", transactionID))
 	l.Logger.Printf(message, v...)
 }
+
+// WARN logs error messages
+func (l *Logger) Warn(transactionID, message string, v ...interface{}) {
+	l.Logger.SetPrefix(fmt.Sprintf("%s: %s : ", "WARN", transactionID))
+	l.Logger.Printf(message, v...)
+}
